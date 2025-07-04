@@ -1,0 +1,165 @@
+body{
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.btn-search{
+  background-color: #fe424d !important;
+  color: #f0f0f0 !important;
+  display: flex !important;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 25px !important;
+  padding: 0 1rem 0 1rem !important;
+}
+.btn-search i{
+  margin-right: 0.5rem;
+}
+.btn-search:hover{
+  background-color: #fe424d !important;
+  color: #f0f0f0 !important;
+}
+
+.search-inp{
+  border-radius: 25px !important;
+  padding: 0.5rem 3rem !important;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+/* Filter */
+
+#filters{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter{
+  text-align: center;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+  opacity: 0.7;
+}
+.filter:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.filter p{
+  font-size: 0.8rem;
+}
+
+button{
+  border: none;
+  background-color: #fff;
+}
+
+.tax-toggle{
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  text-align: center;
+  height: 2.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 9rem;
+}
+/* footer */
+
+footer {
+  width: 100%;
+  background-color: #f0f0f0; /* or any color you want */
+  padding: 20px 0;
+  position: relative;
+}
+
+.f-info {
+  max-width: 1200px;  /* Optional: keeps content centered nicely */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;     /* Centers the inner .f-info */
+  align-items: center;
+  gap: 10px;
+}
+
+.f-info-social i {
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.f-info-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+}
+/*cards */
+
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-body a{
+    text-decoration: none;
+    color: white;
+}
+.row a{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+    margin-bottom: 3.1rem !important;
+    border-radius: 1rem !important;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: grey;
+}
+
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Show image */
+
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+}
+
+#map{
+  height: 40vh;
+  width: 500px;
+}

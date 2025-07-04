@@ -1,0 +1,31 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+    <%- include("../includes/filter.ejs") %>
+    <% if(filterListings) {%>
+      <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <%for(listing of filterListings){%>
+    <a href="/listings/<%=listing._id%>">
+      <div class="card col listing-card">
+        <img
+          src="<%=listing.image.url%>"
+          class="card-img-top"
+          alt="listing image"
+          style="height: 20rem"
+        />
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b> <%=listing.title%></b><br />
+            &#8377; <%=listing.price.toLocaleString("en-IN") %>/night
+          </p>
+        </div>
+      </div>
+    </a>
+    <% } %>
+    <%}%>
+    <% if(filterListings.length==0) {%>
+      <h4>No result found</h4>
+    <% } %>
+  </div>
+</body>
