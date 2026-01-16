@@ -107,7 +107,6 @@ module.exports.updateListing = async (req, res) => {
 
     if (data.status === "OK") {
       listing.geometry = data.results[0].geometry.location;
-      console.log(`Lat: ${listing.geometry}`);
     } else {
       console.log("Geocoding failed:", data.status);
     }

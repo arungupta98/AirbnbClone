@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %>
 <body>
   <div class="row">
-    <div class="col-8 offset-2">
+    <div class="col-12 col-md-8 offset-md-2">
       <br />
       <h3>Creat New Listing</h3>
       <form
@@ -68,14 +68,24 @@
         </div>
         <div class="mb-3">
           <label for="category" class="form-label">Category:</label>
-          <input
+          <select
             name="listing[category]"
-            type="text"
-            placeholder="Enter category"
+            id="category"
             class="form-control"
             required
-          />
-          <div class="invalid-feedback">Please enter the category</div>
+          >
+            <option value="" disabled selected>Select a category</option>
+            <option value="trending">Trending</option>
+            <option value="rooms">Rooms</option>
+            <option value="iconic-cities">Iconic Cities</option>
+            <option value="mountain">Mountain</option>
+            <option value="castles">Castles</option>
+            <option value="pools">Pools</option>
+            <option value="camping">Camping</option>
+            <option value="farms">Farms</option>
+            <option value="artic">Artic</option>
+          </select>
+          <div class="invalid-feedback">Please select a category</div>
         </div>
 
         <div class="mb-3">
