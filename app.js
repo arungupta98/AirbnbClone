@@ -50,7 +50,7 @@ const store=MongoStore.create({
    touchAfter:24*3600,
   });
 
-  store.on("error",()=>{
+  store.on("error",(err)=>{
     console.log("Error in mogo session store",err);
   });
 
@@ -78,12 +78,17 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-app.use((req,res,next)=>{
-  res.locals.success=req.flash("success");
-  res.locals.error=req.flash("error");
-  res.locals.currUser=req.user;
+app.use((req, res, next) => {
+  res.locals.success = Array.isArray(req.flash("success"))
+    ? req.flash("success")
+    : [];
+  res.locals.error = Array.isArray(req.flash("error"))
+    ? req.flash("error")
+    : [];
+  res.locals.currUser = req.user ?? null;
   next();
 });
+
 
 app.get("/home", (req, res) => {
   res.render("listings/home.ejs");
